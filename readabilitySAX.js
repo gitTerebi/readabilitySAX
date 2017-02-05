@@ -697,8 +697,9 @@ Readability.prototype.getArticle = function(type){
 
 	if(!type && this._settings.type) type = this._settings.type;
 
-	if(type === "text") ret.text = this.getText(elem);
-	else ret.html = this.getHTML(elem);
+	// Return both text & html
+	ret.text = this.getText(elem);
+	ret.html = this.getHTML(elem);
 
 	return ret;
 };
